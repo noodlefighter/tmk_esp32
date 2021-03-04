@@ -16,7 +16,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 #include "print.h"
 #include "matrix.h"
-
+#include "tmk_config.h"
 
 __attribute__ ((weak))
 uint8_t matrix_rows(void)

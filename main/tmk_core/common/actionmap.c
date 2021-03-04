@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <stdint.h>
 #include "action_code.h"
 #include "actionmap.h"
+#include "tmk_config.h"
 
 
 /* Keymapping with 16bit action codes */

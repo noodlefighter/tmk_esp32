@@ -33,6 +33,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "led.h"
 #include "command.h"
 #include "backlight.h"
+#include "tmk_config.h"
 
 #ifdef MOUSEKEY_ENABLE
 #include "mousekey.h"
@@ -560,7 +561,7 @@ static void mousekey_console_help(void)
           "pgdown:	-10\n"
           "\n"
           "speed = delta * max_speed * (repeat / time_to_max)\n");
-    xprintf("where delta: cursor=%d, wheel=%d\n" 
+    xprintf("where delta: cursor=%d, wheel=%d\n"
             "See http://en.wikipedia.org/wiki/Mouse_keys\n", MOUSEKEY_MOVE_DELTA,  MOUSEKEY_WHEEL_DELTA);
 }
 

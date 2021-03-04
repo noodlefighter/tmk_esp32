@@ -23,6 +23,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "wait.h"
 #include "debug.h"
 #include "bootloader.h"
+#include "tmk_config.h"
 #if defined(__AVR__)
 #include <avr/pgmspace.h>
 #endif

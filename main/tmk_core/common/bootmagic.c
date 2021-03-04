@@ -11,6 +11,7 @@
 #include "eeconfig.h"
 #include "bootmagic.h"
 #include "hook.h"
+#include "tmk_config.h"
 
 keymap_config_t keymap_config;
 

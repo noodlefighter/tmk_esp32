@@ -13,6 +13,14 @@
 #include "esp_system.h"
 #include "esp_spi_flash.h"
 
+#include "keyboard.h"
+#include "host.h"
+#include "timer.h"
+#include "uart.h"
+#include "debug.h"
+
+extern host_driver_t *blehid_driver(void);
+
 void app_main(void)
 {
     printf("Hello world!\n");
@@ -32,6 +40,17 @@ void app_main(void)
             (chip_info.features & CHIP_FEATURE_EMB_FLASH) ? "embedded" : "external");
 
     printf("Minimum free heap size: %d bytes\n", esp_get_minimum_free_heap_size());
+
+
+
+    keyboard_init();
+    host_set_driver(blehid_driver());
+
+    printf("main loop\n");
+    while (1) {
+        keyboard_task();
+    }
+
 
     for (int i = 10; i >= 0; i--) {
         printf("Restarting in %d seconds...\n", i);

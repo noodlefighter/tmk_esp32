@@ -2,6 +2,7 @@
 #include "action.h"
 #include "unimap.h"
 #include "print.h"
+#include "tmk_config.h"
 #if defined(__AVR__)
 #   include <avr/pgmspace.h>
 #endif
@@ -18,7 +19,7 @@ extern const uint8_t unimap_trans[MATRIX_ROWS][MATRIX_COLS];
 // translates raw matrix to universal map
 keypos_t unimap_translate(keypos_t key)
 {
-    uint8_t unimap_pos = 
+    uint8_t unimap_pos =
 #if defined(__AVR__)
         pgm_read_byte(&unimap_trans[key.row][key.col]);
 #else

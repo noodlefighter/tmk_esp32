@@ -31,6 +31,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "eeconfig.h"
 #include "backlight.h"
 #include "hook.h"
+#include "tmk_config.h"
 #ifdef MOUSEKEY_ENABLE
 #   include "mousekey.h"
 #endif

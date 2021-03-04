@@ -17,6 +17,8 @@ extern "C" {
 #   include "wait_api.h"
 #endif /* __AVR__ */
 
+#define wait_ms(n) (void)n
+
 #ifdef __cplusplus
 }
 #endif

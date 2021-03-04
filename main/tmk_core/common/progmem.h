@@ -9,4 +9,8 @@
 #   define pgm_read_word(p)     *((uint16_t*)p)
 #endif
 
+//todo: pgm_read
+#define pgm_read_byte(p)     *((unsigned char*)p)
+#define pgm_read_word(p)     *((uint16_t*)p)
+
 #endif
